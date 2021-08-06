@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Collatz "calculator"</title>
+    <meta name="description" content="A simple collatz runner.">
+    <meta name="author" content="ANON">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+</head>
+<body>
+    <form>
+        <input id="number" type="number">
+        <input id="button" type="button" value="Calculate" action="/">
+    </form>
+
+    <div id="res"></div>
+
+    {% load static %}
+    <script src="{% static 'scripts.js' %}"></script>
+</body>
+</html>
