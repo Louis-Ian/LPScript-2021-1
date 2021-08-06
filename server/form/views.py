@@ -5,8 +5,10 @@ from django.template import loader
 def func3x(num):
     res = []
 
-    for _ in range(10):
+    for _ in range(1000):
         res.append(num)
+        if num == 1:
+            break
         if num % 2 == 0:
             num //= 2
         else:
