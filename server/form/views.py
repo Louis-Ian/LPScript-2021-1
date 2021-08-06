@@ -8,7 +8,7 @@ def func3x(num):
     for _ in range(10):
         res.append(num)
         if num % 2 == 0:
-            num /= 2
+            num //= 2
         else:
             num = 3 * num + 1
 
@@ -20,4 +20,4 @@ def index (request):
 
 
 def collatz (request, num):
-    return HttpResponse(str(func3x(int(num))))
+    return HttpResponse(','.join([str(i) for i in func3x(int(num))]))

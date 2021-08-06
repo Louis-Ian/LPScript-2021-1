@@ -1,11 +1,19 @@
-var number = document.getElementById("number")
+var number = document.getElementById("number");
 
-var button = document.getElementById("button")
+var button = document.getElementById("button");
 
-var result = document.getElementById("res") 
+var result = document.getElementById("res");
 
-function reqListener () {
-    result.innerHTML = `${this.responseText}`;
+function reqListener() {
+    res = this.responseText
+    var lista = this.responseText.split(',');
+    res = '';
+    for (var i = 0; i < lista.length; i++)
+    {
+        res += `${lista[i]}<br>`;
+    }
+        
+    result.innerHTML = res;
 };
 
 button.onclick = () => {
